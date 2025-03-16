@@ -13,9 +13,7 @@ from .ai.ai_helper import qwen_loader
 from .auth.auth_helper import AuthDataFiles, hashPassword
 from .database.crud import create_default_admin_user
 from .database.database import async_session_maker, create_tables
-from .routers import ai, auth, lesson, user
-
-# from .routers import auth, lesson, user, quiz
+from .routers import ai, auth, lesson, quiz, user
 from .settings import settings
 from .utils.fastapi_globals import GlobalsMiddleware, g
 from .utils.spa import SinglePageApplication
@@ -56,7 +54,7 @@ app.add_middleware(GlobalsMiddleware)
 app.include_router(auth.router, prefix="/api/auth")
 app.include_router(user.router, prefix="/api/user")
 app.include_router(lesson.router, prefix="/api/lesson")
-# app.include_router(quiz.router, prefix="/api/quiz")
+app.include_router(quiz.router, prefix="/api/quiz")
 app.include_router(ai.router, prefix="/api/ai")
 
 
