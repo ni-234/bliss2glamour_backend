@@ -1,0 +1,14 @@
+# python 3.10
+--extra-index-url https://download.pytorch.org/whl/cpu
+fastapi[standard]==0.115.6
+pydantic-settings==2.7.1
+pydantic==2.10.5
+SQLAlchemy==2.0.37
+psycopg2-binary==2.9.10
+passlib[bcrypt]==1.7.4
+python-jose==3.3.0
+aiosqlite==0.20.0
+aiofiles==24.1.0
+transformers==4.47.1
+torch==2.5.1
+accelerate==1.2.1
